@@ -12,6 +12,12 @@ document.body.style.overflow = "hidden";
 
 const swiper = document.getElementById("swiper");
 
+
+// Scroll to the top on laod
+window.onload = function () {
+    window.scrollTo(0,0)
+}
+
 careButton.addEventListener("click", () => {
   // Remove hidden and shown first and add them again.
   header.classList.remove("shown");
@@ -60,6 +66,8 @@ backButton.addEventListener("click", () => {
   header.classList.remove("hidden");
   elementContainer.classList.remove("shown");
   header.classList.add("shown");
+  const svgElement = document.getElementsByTagName('svg');
+  
   elementContainer.classList.add("hidden");
   document.body.style.scrollBehavior = "unset";
   window.scrollTo(0, 0);
